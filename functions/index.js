@@ -359,13 +359,13 @@ appEight.post('/shopping-cart/send/final',(req,res) =>{
  service: 'gmail',
  secure: true,
  auth: {
-        user: 'gupta.ayush1997@gmail.com',
-        pass: 'iwanttobeabankpoin2022'
+        user: '',
+        pass: ''
     }
 });
 
 const mailOptions = {
-  from: 'gupta.ayush1997@gmail.com', // sender address
+  from: '', // sender address
   to: req.body.mailOne, // list of receivers
   subject: 'Receipt:', // Subject line
      html: output+'<p><h3>Product Details</h3><p/>'+'<div><table style=" width:75%; border: 1px solid black; border-collapse: collapse;"><tbody><tr style=" border: 1px solid black; border-collapse: collapse;"><td style=" border: 1px solid black; border-collapse: collapse;"><strong>Product:</strong></td>'+content1+'</tr><tr style=" border: 1px solid black; border-collapse: collapse;"><td style=" border: 1px solid black; border-collapse: collapse;"><strong>Price/Item:</strong></td>'+content2+'</tr><tr style=" border: 1px solid black; border-collapse: collapse;"><td style=" border: 1px solid black; border-collapse: collapse;"><strong>Qty:</strong></td>'+content3+'</tr><tr style=" border: 1px solid black; border-collapse: collapse;"><td style=" border: 1px solid black; border-collapse: collapse;"><strong>Total:</strong></td>'+content4+'</tr></tr><tr style=" border: 1px solid black; border-collapse: collapse;"><td style=" border: 1px solid black; border-collapse: collapse;"><strong>Gross Total:</strong></td><td style=" border: 1px solid black; border-collapse: collapse;">'+output2+'</td></tr></tbody></table>'// plain text body
